@@ -2,6 +2,7 @@
 name = "fifo-named-pipe"
 version = "0.1.0"
 edition = "2021"
+publish = false     #  prevent a package from being published to a package registry by mistake, to keep a package private in a company
 authors = ["Amidamaru <ardtimeit@gmail.com>"]
 description = "Litheum Named Pipe"
 license = "MIT/Apache-2.0"

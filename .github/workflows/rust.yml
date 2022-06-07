@@ -49,4 +49,4 @@ jobs:
           export GITHUB_PULL_REQUEST=${{ env.GITHUB_PULL_REQUEST }}
           export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
           export PROJECT_TITLE="Litheum Named Pipe is built on ubuntu-latest"
-          bash <(curl -s https://raw.githubusercontent.com/duyet/cov-rs/master/cov.sh)
+          cd . && bash <(curl -s https://raw.githubusercontent.com/duyet/cov-rs/master/cov.sh)

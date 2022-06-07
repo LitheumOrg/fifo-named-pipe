@@ -38,15 +38,3 @@ jobs:
         run: cargo build --verbose
       - name: Run tests
         run: cargo test --verbose
-
-  coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Code Coverage
-        env:
-          GITHUB_PULL_REQUEST: ${{ github.event.pull_request.number }}
-        run: |
-          export GITHUB_PULL_REQUEST=${{ env.GITHUB_PULL_REQUEST }}
-          export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-          export PROJECT_TITLE="Litheum Named Pipe is built on ubuntu-latest"
-          cd . && bash <(curl -s https://raw.githubusercontent.com/duyet/cov-rs/master/cov.sh)
